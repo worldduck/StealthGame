@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Game
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -74,7 +74,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 146
+  controlID: 18
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -125,7 +125,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 90
+  controlID: 24
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -201,7 +201,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 89
+  controlID: 17
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -247,7 +247,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 37
+  controlID: 47
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -293,8 +293,8 @@ MonoBehaviour:
     y: 0
     width: 516
     height: 486
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -411,9 +411,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 62700000
-      m_LastClickedID: 0
-      m_ExpandedIDs: 58b7ffffc6f5ffffcaf5ffff06f6ffff70f8ffff
+      m_SelectedIDs: 5435ffff
+      m_LastClickedID: -51884
+      m_ExpandedIDs: 0c67ffffe278ffff827fffffa88dffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -519,22 +519,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Dynamic Parkour System/Scripts/Helpers/Player
+    - Assets/02. Scripts
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Dynamic Parkour System/Scripts/Helpers/Player
+  - Assets/02. Scripts
   m_LastFoldersGridSize: 16
   m_LastProjectPath: D:\Unity\GitHub\StealthGame\StealthGame\Stealth
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 16}
-    m_SelectedIDs: 2c720000
-    m_LastClickedID: 29228
-    m_ExpandedIDs: 0000000080620000b2620000bc620000be620000c6620000d062000004720000087200001072000000ca9a3b
+    m_SelectedIDs: c6d60000
+    m_LastClickedID: 54982
+    m_ExpandedIDs: 0000000098d600009ad600009cd600009ed60000a0d60000a2d60000a4d60000a6d60000a8d6000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -562,7 +562,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000080620000
+    m_ExpandedIDs: 0000000098d600009ad600009cd600009ed60000a0d60000a2d60000a4d60000a6d60000a8d60000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -593,18 +593,18 @@ MonoBehaviour:
     m_ExpandedInstanceIDs: 52600000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: DrawLine
-      m_OriginalName: DrawLine
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 27554
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 4}
     m_CreateAssetUtility:
@@ -935,9 +935,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -2.436052, y: -1.2389221, z: 4.300003}
+    m_Target: {x: 3.8452823, y: -5.2257366, z: 7.055526}
     speed: 2
-    m_Value: {x: -2.436052, y: -1.2389221, z: 4.300003}
+    m_Value: {x: 3.8452823, y: -5.2257366, z: 7.055526}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -984,13 +984,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.18786208, y: 0.18064964, z: -0.035175312, w: -0.9648003}
+    m_Target: {x: 0.35450032, y: -0.009817829, z: 0.0037234435, w: 0.93500215}
     speed: 2
-    m_Value: {x: -0.18786177, y: 0.18064934, z: -0.035175253, w: -0.9647987}
+    m_Value: {x: 0.3544986, y: -0.009817781, z: 0.0037234253, w: 0.93499756}
   m_Size:
-    m_Target: 3.852397
+    m_Target: 13.719498
     speed: 2
-    m_Value: 3.852397
+    m_Value: 13.128706
   m_Ortho:
     m_Target: 0
     speed: 2
