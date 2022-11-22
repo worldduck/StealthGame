@@ -54,3 +54,11 @@ The following packages were added:
   com.unity.render-pipelines.universal@12.1.7
   com.unity.terrain-tools@4.0.3
   com.unity.visualeffectgraph@12.1.7
+
+=== Tue Nov 22 11:23:52 2022
+
+Packages were changed.
+Update Mode: mergeDefaultDependencies
+
+The following packages were added:
+  com.unity.postprocessing@2.3.0

@@ -116,6 +116,7 @@
 -define:ENABLE_TIMELINE
 -define:ENABLE_INPUT_SYSTEM
 -define:STARTER_ASSETS_PACKAGES_CHECKED
+-define:UNITY_POST_PROCESSING_STACK_V2
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
 -r:"Assets/StarterAssets/Editor/PackageChecker/StarterAssetsPackageChecker.dll"
@@ -359,6 +360,8 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.Mathematics.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.Performance.Profile-Analyzer.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.PlasticSCM.Editor.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aE.dag/Unity.Postprocessing.Editor.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aE.dag/Unity.Postprocessing.Runtime.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.RenderPipeline.Universal.ShaderLibrary.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.RenderPipelines.Core.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.RenderPipelines.Core.Runtime.ref.dll"
@@ -399,23 +402,11 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.TestRunner.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Dynamic Parkour System/Editor/EditorHandler.cs"
-"Assets/NatureStarterKit2/Editor/ImageEffects/AntialiasingEditor.cs"
-"Assets/NatureStarterKit2/Editor/ImageEffects/BloomAndFlaresEditor.cs"
-"Assets/NatureStarterKit2/Editor/ImageEffects/BloomEditor.cs"
-"Assets/NatureStarterKit2/Editor/ImageEffects/CameraMotionBlurEditor.cs"
-"Assets/NatureStarterKit2/Editor/ImageEffects/ColorCorrectionCurvesEditor.cs"
-"Assets/NatureStarterKit2/Editor/ImageEffects/ColorCorrectionLookupEditor.cs"
-"Assets/NatureStarterKit2/Editor/ImageEffects/CreaseShadingEditor.cs"
-"Assets/NatureStarterKit2/Editor/ImageEffects/DepthOfFieldDeprecatedEditor.cs"
-"Assets/NatureStarterKit2/Editor/ImageEffects/DepthOfFieldEditor.cs"
-"Assets/NatureStarterKit2/Editor/ImageEffects/EdgeDetectionEditor.cs"
-"Assets/NatureStarterKit2/Editor/ImageEffects/NoiseAndGrainEditor.cs"
-"Assets/NatureStarterKit2/Editor/ImageEffects/SunShaftsEditor.cs"
-"Assets/NatureStarterKit2/Editor/ImageEffects/TonemappingEditor.cs"
-"Assets/NatureStarterKit2/Editor/ImageEffects/VignetteAndChromaticAberrationEditor.cs"
 "Assets/StarterAssets/Editor/StarterAssetsDeployMenu.cs"
 "Assets/StarterAssets/Editor/ThirdPersonStarterAssetsDeployMenu.cs"
 "Assets/StarterAssets/TutorialInfo/Scripts/Editor/ReadmeEditor.cs"
+"Assets/TheTalesFactory/Photoscanned MoutainsRocks PBR/_ReadMe & Publisher Window/Inspector Info/Scripts/Editor/PublisherReadmeEditor.cs"
+"Assets/TheTalesFactory/Photoscanned MoutainsRocks PBR/_ReadMe & Publisher Window/Welcome Screen/Scripts/Editor/PublisherWelcomeScreen.cs"
 -langversion:9.0
 
 /deterministic

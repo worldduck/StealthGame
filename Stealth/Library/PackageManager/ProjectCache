@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638046098534412914
-    m_Hash: 1541312235
+      ticks: 638046806320906608
+    m_Hash: 3503850536
   m_LockFileStatus:
     m_FilePath: D:/Unity/GitHub/StealthGame/StealthGame/Stealth/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638046098884991588
-    m_Hash: 3595394909
+      ticks: 638046806476010392
+    m_Hash: 1573898817
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
@@ -736,6 +736,90 @@ m_ResolvedPackages:
     path: 
   unityLifecycle:
     version: 1.3.0
+    nextVersion: 
+- packageId: com.unity.postprocessing@2.3.0
+  testable: 0
+  isDirectDependency: 1
+  version: 2.3.0
+  source: 1
+  resolvedPath: D:\Unity\GitHub\StealthGame\StealthGame\Stealth\Library\PackageCache\com.unity.postprocessing@2.3.0
+  assetPath: Packages/com.unity.postprocessing
+  name: com.unity.postprocessing
+  displayName: Post Processing
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: 
+  description: The post-processing stack (v2) comes with a collection of effects
+    and image filters you can apply to your cameras to improve the visuals of your
+    games.
+  status: 4
+  errors: []
+  versions:
+    all:
+    - 0.1.7
+    - 0.1.8
+    - 2.0.0-beta
+    - 2.0.1-beta
+    - 2.0.2-preview
+    - 2.0.3-preview
+    - 2.0.5-preview
+    - 2.0.7-preview
+    - 2.0.8-preview
+    - 2.0.9-preview
+    - 2.0.10-preview
+    - 2.0.11-preview
+    - 2.0.12-preview
+    - 2.0.13-preview
+    - 2.0.14-preview
+    - 2.0.15-preview
+    - 2.0.16-preview
+    - 2.0.17-preview
+    - 2.1.0
+    - 2.1.1
+    - 2.1.2
+    - 2.1.3
+    - 2.1.4
+    - 2.1.5
+    - 2.1.6
+    - 2.1.7
+    - 2.2.1
+    - 2.2.2
+    - 2.3.0
+    - 3.0.1
+    - 3.0.3
+    - 3.1.0
+    - 3.1.1
+    - 3.2.0
+    - 3.2.1
+    - 3.2.2
+    compatible:
+    - 3.2.2
+    verified: 3.2.2
+  dependencies: []
+  resolvedDependencies: []
+  keywords: []
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+  hideInEditor: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 637144563160000000
+  documentationUrl: 
+  hasRepository: 1
+  repository:
+    type: git
+    url: git@github.com:Unity-Technologies/PostProcessing.git
+    revision: e6de985c41f04a5fc7c7227dd67e3e73fac834e7
+    path: 
+  unityLifecycle:
+    version: 3.2.2
     nextVersion: 
 - packageId: com.unity.render-pipelines.universal@12.1.7
   testable: 0
@@ -3868,7 +3952,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 
-  type: 
+  type: asset
   description: Burst is a compiler that translates from IL/.NET bytecode to highly
     optimized native code using LLVM.
   status: 4
@@ -3993,6 +4077,7 @@ m_ResolvedPackages:
     - 1.8.0-pre.2
     - 1.8.0
     - 1.8.1
+    - 1.8.2
     compatible:
     - 1.6.6
     - 1.7.0-pre.1
@@ -4005,6 +4090,7 @@ m_ResolvedPackages:
     - 1.8.0-pre.2
     - 1.8.0
     - 1.8.1
+    - 1.8.2
     verified: 1.6.6
   dependencies:
   - name: com.unity.mathematics
@@ -4020,7 +4106,7 @@ m_ResolvedPackages:
     scopes: []
     isDefault: 1
     capabilities: 7
-  hideInEditor: 1
+  hideInEditor: 0
   isAssetStorePackage: 0
   datePublishedTicks: 637902875830000000
   documentationUrl: 
@@ -4357,17 +4443,33 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 
-  type: 
+  type: asset
   description: General search window for use in the Editor. First target use is for
     GraphView node search.
   status: 4
   errors: []
   versions:
     all:
+    - 4.0.0-preview
+    - 4.0.0
+    - 4.0.7-preview
+    - 4.0.7
+    - 4.0.8-preview
+    - 4.0.9
+    - 4.1.0-preview
+    - 4.1.0
+    - 4.2.0
+    - 4.3.0
+    - 4.3.1
+    - 4.3.2
+    - 4.6.0-preview
+    - 4.7.0-preview
     - 4.9.1
+    - 4.9.2
     compatible:
     - 4.9.1
-    verified: 4.9.1
+    - 4.9.2
+    verified: 4.9.2
   dependencies: []
   resolvedDependencies: []
   keywords:
@@ -4380,9 +4482,9 @@ m_ResolvedPackages:
     scopes: []
     isDefault: 1
     capabilities: 7
-  hideInEditor: 1
+  hideInEditor: 0
   isAssetStorePackage: 0
-  datePublishedTicks: 0
+  datePublishedTicks: 637695653650000000
   documentationUrl: 
   hasRepository: 1
   repository:
