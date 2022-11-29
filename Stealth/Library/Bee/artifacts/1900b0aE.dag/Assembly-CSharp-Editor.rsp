@@ -119,7 +119,7 @@
 -define:UNITY_POST_PROCESSING_STACK_V2
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
--r:"Assets/StarterAssets/Editor/PackageChecker/StarterAssetsPackageChecker.dll"
+-r:"Assets/StarterAssetsThirdPerson/Editor/PackageChecker/StarterAssetsPackageChecker.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.6f1/Editor/Data/Managed/UnityEditor.Graphs.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.6f1/Editor/Data/Managed/UnityEngine/UnityEditor.CoreModule.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.6f1/Editor/Data/Managed/UnityEngine/UnityEditor.DeviceSimulatorModule.dll"
@@ -401,10 +401,11 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.TestRunner.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
+-analyzer:"Assets/StarterAssetsThirdPerson/Editor/PackageChecker/StarterAssetsPackageChecker.dll"
 "Assets/Dynamic Parkour System/Editor/EditorHandler.cs"
-"Assets/StarterAssets/Editor/StarterAssetsDeployMenu.cs"
-"Assets/StarterAssets/Editor/ThirdPersonStarterAssetsDeployMenu.cs"
-"Assets/StarterAssets/TutorialInfo/Scripts/Editor/ReadmeEditor.cs"
+"Assets/StarterAssetsThirdPerson/Editor/StarterAssetsDeployMenu.cs"
+"Assets/StarterAssetsThirdPerson/Editor/ThirdPersonStarterAssetsDeployMenu.cs"
+"Assets/StarterAssetsThirdPerson/TutorialInfo/Scripts/Editor/ReadmeEditor.cs"
 "Assets/TheTalesFactory/Photoscanned MoutainsRocks PBR/_ReadMe & Publisher Window/Inspector Info/Scripts/Editor/PublisherReadmeEditor.cs"
 "Assets/TheTalesFactory/Photoscanned MoutainsRocks PBR/_ReadMe & Publisher Window/Welcome Screen/Scripts/Editor/PublisherWelcomeScreen.cs"
 -langversion:9.0

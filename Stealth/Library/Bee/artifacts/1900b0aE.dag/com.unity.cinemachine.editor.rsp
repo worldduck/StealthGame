@@ -129,7 +129,7 @@
 -define:CINEMACHINE_UNITY_INPUTSYSTEM
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
--r:"Assets/StarterAssets/Editor/PackageChecker/StarterAssetsPackageChecker.dll"
+-r:"Assets/StarterAssetsThirdPerson/Editor/PackageChecker/StarterAssetsPackageChecker.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.6f1/Editor/Data/Managed/UnityEditor.Graphs.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.6f1/Editor/Data/Managed/UnityEngine/UnityEditor.CoreModule.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.3.6f1/Editor/Data/Managed/UnityEngine/UnityEditor.DeviceSimulatorModule.dll"
@@ -372,6 +372,7 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.TestRunner.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
+-analyzer:"Assets/StarterAssetsThirdPerson/Editor/PackageChecker/StarterAssetsPackageChecker.dll"
 "Library/PackageCache/com.unity.cinemachine@2.8.9/Editor/Editors/Cinemachine3rdPersonFollowEditor.cs"
 "Library/PackageCache/com.unity.cinemachine@2.8.9/Editor/Editors/CinemachineBasicMultiChannelPerlinEditor.cs"
 "Library/PackageCache/com.unity.cinemachine@2.8.9/Editor/Editors/CinemachineBlenderSettingsEditor.cs"
