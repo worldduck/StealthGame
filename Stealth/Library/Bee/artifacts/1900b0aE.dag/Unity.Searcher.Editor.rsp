@@ -352,7 +352,6 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.TestRunner.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
--analyzer:"Assets/StarterAssetsThirdPerson/Editor/PackageChecker/StarterAssetsPackageChecker.dll"
 "Library/PackageCache/com.unity.searcher@4.9.1/Editor/AssemblyInfo.cs"
 "Library/PackageCache/com.unity.searcher@4.9.1/Editor/Searcher/Searcher.cs"
 "Library/PackageCache/com.unity.searcher@4.9.1/Editor/Searcher/SearcherAdapter.cs"

@@ -356,7 +356,6 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.RenderPipelines.Core.Runtime.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
--analyzer:"Assets/StarterAssetsThirdPerson/Editor/PackageChecker/StarterAssetsPackageChecker.dll"
 "Library/PackageCache/com.unity.render-pipelines.universal@12.1.7/Runtime/2D/CinemachineUniversalPixelPerfect.cs"
 "Library/PackageCache/com.unity.render-pipelines.universal@12.1.7/Runtime/2D/Clipper.cs"
 "Library/PackageCache/com.unity.render-pipelines.universal@12.1.7/Runtime/2D/Light2D.cs"

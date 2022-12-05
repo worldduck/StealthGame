@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class Guard : MonoBehaviour
 {
-    public float speed = 10;
-    public float waitTime = 1f;
+    public float speed = 5;
+    public float waitTime = 2f;
     public float turnSpeed = 180;
 
     public Transform pathHolder;
+    private Animator animator;
 
     private void Start()
     {
+        animator = GetComponent<Animator>();
         Vector3[] waypoints = new Vector3[pathHolder.childCount];
         for (int i = 0; i < waypoints.Length; i++)
         {
@@ -33,10 +35,12 @@ public class Guard : MonoBehaviour
         while (true)
         {
             transform.position = Vector3.MoveTowards(transform.position, targetwaypoint, speed * Time.deltaTime);
+            animator.SetBool("isMove", true);
             if (transform.position == targetwaypoint)
             {
                 targetWaypointIndex = (targetWaypointIndex + 1) % waypoints.Length;
                 targetwaypoint = waypoints[targetWaypointIndex];
+                animator.SetBool("isMove", false);
                 yield return new WaitForSeconds (waitTime);
                 yield return StartCoroutine(TurnToFace(targetwaypoint));
             }

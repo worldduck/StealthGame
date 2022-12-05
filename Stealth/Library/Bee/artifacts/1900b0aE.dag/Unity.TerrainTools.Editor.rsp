@@ -354,7 +354,6 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.TestRunner.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
--analyzer:"Assets/StarterAssetsThirdPerson/Editor/PackageChecker/StarterAssetsPackageChecker.dll"
 "Library/PackageCache/com.unity.terrain-tools@4.0.3/Editor/Analytics/TerrainToolsAnalytics.cs"
 "Library/PackageCache/com.unity.terrain-tools@4.0.3/Editor/AssemblyInfo.cs"
 "Library/PackageCache/com.unity.terrain-tools@4.0.3/Editor/Importers/TerrainToolsShaderImporter.cs"

@@ -27,7 +27,6 @@ namespace Climbing
 {
     public class SwitchCameras : MonoBehaviour
     {
-        // Start is called before the first frame update
         Animator animator;
 
         enum CameraType

@@ -349,7 +349,6 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.InputSystem.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
--analyzer:"Assets/StarterAssetsThirdPerson/Editor/PackageChecker/StarterAssetsPackageChecker.dll"
 "Library/PackageCache/com.unity.render-pipelines.core@12.1.7/Runtime/AssemblyInfo.cs"
 "Library/PackageCache/com.unity.render-pipelines.core@12.1.7/Runtime/Camera/CameraSwitcher.cs"
 "Library/PackageCache/com.unity.render-pipelines.core@12.1.7/Runtime/Camera/FreeCamera.cs"

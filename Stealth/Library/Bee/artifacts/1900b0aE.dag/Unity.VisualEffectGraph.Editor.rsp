@@ -357,7 +357,6 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.TestRunner.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
--analyzer:"Assets/StarterAssetsThirdPerson/Editor/PackageChecker/StarterAssetsPackageChecker.dll"
 "Library/PackageCache/com.unity.visualeffectgraph@12.1.7/Editor/Compiler/VFXCodeGenerator.cs"
 "Library/PackageCache/com.unity.visualeffectgraph@12.1.7/Editor/Compiler/VFXExpressionGraph.cs"
 "Library/PackageCache/com.unity.visualeffectgraph@12.1.7/Editor/Compiler/VFXExpressionMapper.cs"

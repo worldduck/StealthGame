@@ -353,7 +353,6 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.TestRunner.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
--analyzer:"Assets/StarterAssetsThirdPerson/Editor/PackageChecker/StarterAssetsPackageChecker.dll"
 "Library/PackageCache/com.unity.postprocessing@2.3.0/PostProcessing/Editor/Attributes/DecoratorAttribute.cs"
 "Library/PackageCache/com.unity.postprocessing@2.3.0/PostProcessing/Editor/Attributes/PostProcessEditorAttribute.cs"
 "Library/PackageCache/com.unity.postprocessing@2.3.0/PostProcessing/Editor/BaseEditor.cs"
