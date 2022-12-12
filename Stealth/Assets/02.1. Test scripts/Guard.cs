@@ -11,7 +11,8 @@ public class Guard : MonoBehaviour
     public Light spotlight;
     public float viewDistance;
     public LayerMask viewMask;
-    private float viewAngle;
+    private float seeAngle;
+    private float attackAngle;
 
     public Transform pathHolder; // 이동 경로를 담아둘 변수
     private Transform player; // 플레이어의 Transform
@@ -21,7 +22,7 @@ public class Guard : MonoBehaviour
 
     private void Start()
     {
-        viewAngle = spotlight.spotAngle;
+        seeAngle = spotlight.spotAngle;
         player = GameObject.FindGameObjectWithTag("Player").transform;
         originalSpotlightColor = spotlight.color;
 
@@ -41,12 +42,19 @@ public class Guard : MonoBehaviour
 
     private void Update()
     {
+        // CanSeePlayer() 메서드가 작동 한다면
         if (CanSeePlayer())
         {
-            spotlight.color = Color.red;
+            // 스포트라이트 컬러를 yellow로 변경
+            spotlight.color = Color.yellow;
         }
+        //else if (CanAttackPlayer())
+        //{
+        //    spotlight.color = Color.red;
+        //}
         else
         {
+            // 스포트라이트 컬러가 원래대로 변경
             spotlight.color = originalSpotlightColor;
         }
     }
@@ -59,7 +67,7 @@ public class Guard : MonoBehaviour
             Vector3 dirToPlayer = (player.position - transform.position).normalized;
             float angleBetweenGuardAndPlayer = Vector3.Angle(transform.forward, dirToPlayer);
             // 플레이어가 뷰 앵글 안에 있다면
-            if (angleBetweenGuardAndPlayer < viewAngle / 2f)
+            if (angleBetweenGuardAndPlayer < seeAngle / 2f)
             {
                 // 플레이어가 장애물에 가려지지 않았다면
                 if (!Physics.Linecast (transform.position, player.position, viewMask))
@@ -70,6 +78,11 @@ public class Guard : MonoBehaviour
         }
         return false;
     }
+
+    //bool CanAttackPlayer()
+    //{
+
+    //}
 
     IEnumerator FollowPath(Vector3 [] waypoints)
     {
