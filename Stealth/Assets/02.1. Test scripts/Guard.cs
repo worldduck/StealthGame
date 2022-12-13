@@ -4,31 +4,40 @@ using UnityEngine;
 
 public class Guard : MonoBehaviour
 {
+    public enum State { Idle, Yellow, Red }
+    public State state = State.Idle;
     public float speed = 5; // 이동 속도
     public float waitTime = 2f; // 대기 시간
     public float turnSpeed = 180; // 회전 속도
 
-    public Light spotlight;
-    public float viewDistance;
+    public Light spotlight1; // 시야거리를 표현해줄 spotlight
+    public Light spotlight2; // 공격거리를 표현해줄 spotlight
+
+    public float viewDistance; // 시야거리
+    public float hitDistance; // 공격거리
     public LayerMask viewMask;
-    private float seeAngle;
-    private float attackAngle;
+    private float seeAngle; // 시야각도
+    private float attackAngle; // 공격각도
 
     public Transform pathHolder; // 이동 경로를 담아둘 변수
+    private Vector3[] waypoints;
     private Transform player; // 플레이어의 Transform
     private Color originalSpotlightColor; // 스포트라이트의 기본색
 
     private Animator animator; // 가드의 애니메이터
 
+    private bool a = false;
+
     private void Start()
     {
-        seeAngle = spotlight.spotAngle;
+        seeAngle = spotlight1.spotAngle;
+        attackAngle = spotlight2.spotAngle;
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        originalSpotlightColor = spotlight.color;
+        originalSpotlightColor = spotlight1.color;
 
         animator = GetComponent<Animator>();
 
-        Vector3[] waypoints = new Vector3[pathHolder.childCount]; // 웨이포인트들의 배열
+        waypoints = new Vector3[pathHolder.childCount]; // 웨이포인트들의 배열
         for (int i = 0; i < waypoints.Length; i++)
         {
             // 웨이포인트들의 위치정보를 배열에 채우기
@@ -45,17 +54,29 @@ public class Guard : MonoBehaviour
         // CanSeePlayer() 메서드가 작동 한다면
         if (CanSeePlayer())
         {
-            // 스포트라이트 컬러를 yellow로 변경
-            spotlight.color = Color.yellow;
+            a = false;
+            state = State.Yellow;
+            // 스포트라이트1 컬러를 yellow로 변경
+            spotlight1.color = Color.yellow;
+            // 노란느낌표 오브젝트 활성화
+            GameObject.Find("Goblin01").transform.Find("Exclamation_yellow").gameObject.SetActive(true);
+            animator.SetBool("isMove", false);
         }
-        //else if (CanAttackPlayer())
-        //{
-        //    spotlight.color = Color.red;
-        //}
+        else if (CanAttackPlayer())
+        {
+            spotlight1.color = originalSpotlightColor;
+            spotlight2.color = Color.red;
+            Debug.Log("11");
+        }
         else
         {
-            // 스포트라이트 컬러가 원래대로 변경
-            spotlight.color = originalSpotlightColor;
+            // 스포트라이트1,2 컬러가 원래대로 변경
+            spotlight1.color = originalSpotlightColor;
+            spotlight2.color = originalSpotlightColor;
+            // 느낌표 오브젝트 비활성화
+            GameObject.Find("Goblin01").transform.Find("Exclamation_yellow").gameObject.SetActive(false);
+            state = State.Idle;
+            StartCoroutine(FollowPath(waypoints));
         }
     }
 
@@ -66,7 +87,7 @@ public class Guard : MonoBehaviour
         {
             Vector3 dirToPlayer = (player.position - transform.position).normalized;
             float angleBetweenGuardAndPlayer = Vector3.Angle(transform.forward, dirToPlayer);
-            // 플레이어가 뷰 앵글 안에 있다면
+            // 플레이어가 seeAngle 안에 있다면
             if (angleBetweenGuardAndPlayer < seeAngle / 2f)
             {
                 // 플레이어가 장애물에 가려지지 않았다면
@@ -79,13 +100,34 @@ public class Guard : MonoBehaviour
         return false;
     }
 
-    //bool CanAttackPlayer()
-    //{
-
-    //}
+    bool CanAttackPlayer()
+    {
+        // 플레이어가 공격 거리 반경 안에 있다면
+        if (Vector3.Distance(transform.position, player.position) < hitDistance)
+        {
+            Vector3 dirToPlayer = (player.position - transform.position).normalized;
+            float angleBetweenGuardAndPlayer = Vector3.Angle(transform.forward, dirToPlayer);
+            // 플레이어가 attackAngle 안에 있다면
+            if (angleBetweenGuardAndPlayer < attackAngle / 2f)
+            {
+                // 플레이어가 장애물에 가려지지 않았다면
+                if (!Physics.Linecast(transform.position, player.position, viewMask))
+                {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
 
     IEnumerator FollowPath(Vector3 [] waypoints)
     {
+        if (a == true)
+        {
+            yield break;
+        }
+        a = true;
+
         // 첫번째 웨이포인트
         transform.position = waypoints [0];
 
@@ -96,7 +138,7 @@ public class Guard : MonoBehaviour
         // 가드 회전의 초기값
         transform.LookAt(targetwaypoint);
 
-        while (true)
+        while (state == State.Idle)
         {
             // 현재위치(transform.position)를 앞으로(Vector3.MoveTowards)
             // 목표지점(targetwaypoint)까지 속도(speed * Time.deltaTime)로 이동
@@ -156,8 +198,12 @@ public class Guard : MonoBehaviour
         // 마지막 웨이포인트에서 시작점을 이어주는 선
         Gizmos.DrawLine(previousPosition, startPosition);
 
-        // 시야 거리 빨간선으로 표시
-        Gizmos.color = Color.red;
+        // 시야 거리 노란선으로 표시
+        Gizmos.color = Color.yellow;
         Gizmos.DrawRay(transform.position, transform.forward * viewDistance);
+
+        // 공격 거리 빨간선으로 표시
+        Gizmos.color = Color.red;
+        Gizmos.DrawRay(transform.position, transform.forward * hitDistance);
     }
 }
