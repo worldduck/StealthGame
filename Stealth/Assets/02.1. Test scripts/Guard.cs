@@ -26,7 +26,7 @@ public class Guard : MonoBehaviour
 
     private Animator animator; // 가드의 애니메이터
 
-    private bool a = false;
+    //private bool a = false;
 
     private void Start()
     {
@@ -54,13 +54,14 @@ public class Guard : MonoBehaviour
         // CanSeePlayer() 메서드가 작동 한다면
         if (CanSeePlayer())
         {
-            a = false;
+            //a = false;
             state = State.Yellow;
             // 스포트라이트1 컬러를 yellow로 변경
             spotlight1.color = Color.yellow;
             // 노란느낌표 오브젝트 활성화
             GameObject.Find("Goblin01").transform.Find("Exclamation_yellow").gameObject.SetActive(true);
             animator.SetBool("isMove", false);
+            
         }
         else if (CanAttackPlayer())
         {
@@ -76,7 +77,7 @@ public class Guard : MonoBehaviour
             // 느낌표 오브젝트 비활성화
             GameObject.Find("Goblin01").transform.Find("Exclamation_yellow").gameObject.SetActive(false);
             state = State.Idle;
-            StartCoroutine(FollowPath(waypoints));
+            //StartCoroutine(FollowPath(waypoints));
         }
     }
 
@@ -122,11 +123,11 @@ public class Guard : MonoBehaviour
 
     IEnumerator FollowPath(Vector3 [] waypoints)
     {
-        if (a == true)
-        {
-            yield break;
-        }
-        a = true;
+        //if (a == true)
+        //{
+        //    yield break;
+        //}
+        //a = true;
 
         // 첫번째 웨이포인트
         transform.position = waypoints [0];
