@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Guard : MonoBehaviour
 {
-    public enum State { Idle, Yellow, Red }
-    public State state = State.Idle;
+    public enum State { Search, Yellow, Red }
+    public State state = State.Search;
     public float speed = 5; // 이동 속도
     public float waitTime = 2f; // 대기 시간
     public float turnSpeed = 180; // 회전 속도
@@ -60,6 +60,9 @@ public class Guard : MonoBehaviour
             spotlight1.color = Color.yellow;
             // 노란느낌표 오브젝트 활성화
             GameObject.Find("Goblin01").transform.Find("Exclamation_yellow").gameObject.SetActive(true);
+            // 상태 Yellow로 변경
+            state = State.Yellow;
+            // Move -> Idle 애니메이션으로 변경
             animator.SetBool("isMove", false);
             
         }
@@ -76,7 +79,7 @@ public class Guard : MonoBehaviour
             spotlight2.color = originalSpotlightColor;
             // 느낌표 오브젝트 비활성화
             GameObject.Find("Goblin01").transform.Find("Exclamation_yellow").gameObject.SetActive(false);
-            state = State.Idle;
+            state = State.Search;
             //StartCoroutine(FollowPath(waypoints));
         }
     }
@@ -139,7 +142,8 @@ public class Guard : MonoBehaviour
         // 가드 회전의 초기값
         transform.LookAt(targetwaypoint);
 
-        while (state == State.Idle)
+        // 수색(Search) 상태인 동안
+        while (state == State.Search)
         {
             // 현재위치(transform.position)를 앞으로(Vector3.MoveTowards)
             // 목표지점(targetwaypoint)까지 속도(speed * Time.deltaTime)로 이동
@@ -159,6 +163,13 @@ public class Guard : MonoBehaviour
                 yield return new WaitForSeconds (waitTime);
                 // 가드가 회전하는 동안 대기
                 yield return StartCoroutine(TurnToFace(targetwaypoint));
+            }
+
+            // 경계(Yellow) 상태인 동안
+            while (state == State.Yellow)
+            {
+                // 기존 루틴 종료
+                yield return null;
             }
             // 다음 루틴까지 대기
             yield return null;
