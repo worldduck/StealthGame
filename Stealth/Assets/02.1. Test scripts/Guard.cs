@@ -169,7 +169,7 @@ public class Guard : MonoBehaviour
             while (state == State.Yellow)
             {
                 // 기존 루틴 종료
-                yield return null;
+                StopCoroutine("FollowPath");
             }
             // 다음 루틴까지 대기
             yield return null;
